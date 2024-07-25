@@ -1,15 +1,23 @@
 import { Keypair } from "@solana/web3.js";
 
-export const generateKey = () => {
-  const wallet = Keypair.generate();
+// export const generateKey = () => {
+//   const wallet = Keypair.generate();
 
-  const publickey = wallet.publicKey.toBase58();
-  const privatekey = wallet.secretKey;
+//   const publickey = wallet.publicKey.toBase58();
+//   const privatekey = wallet.secretKey;
 
-  console.log(privatekey);
+//   console.log(privatekey);
 
-  return {
-    publickey,
-    privatekey,
-  };
-};
+//   return {
+//     publickey,
+//     privatekey,
+//   };
+// };
+
+const wallet = Keypair.generate();
+
+const publickey = wallet.publicKey.toBase58();
+const privatekey = wallet.secretKey;
+
+console.log(privatekey);
+console.log(publickey);
